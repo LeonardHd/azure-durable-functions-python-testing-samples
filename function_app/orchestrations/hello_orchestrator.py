@@ -14,6 +14,9 @@ def example_echo_activity(inputDict: dict[str, Any]):
     context_name="context",
 )
 def example_orchestration(context: DurableOrchestrationContext) -> Generator[dict[str, Any], Any, Any]:
+    _example_orchestration(context)
+
+def _example_orchestration(context: DurableOrchestrationContext) -> Generator[dict[str, Any], Any, Any]:
 
     context.set_custom_status(context.get_input())
     expiry_time = context.current_utc_datetime + timedelta(minutes=5)
