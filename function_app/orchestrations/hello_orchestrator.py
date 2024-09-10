@@ -3,14 +3,14 @@ from typing import Any, Generator
 
 from azure.durable_functions import Blueprint, DurableOrchestrationContext
 
-example_blueprint = Blueprint()
+hello_orchestrator_blueprint = Blueprint()
 
-@example_blueprint.activity_trigger(input_name="inputDict")
+@hello_orchestrator_blueprint.activity_trigger(input_name="inputDict")
 def example_echo_activity(inputDict: dict[str, Any]):
     return inputDict
 
 
-@example_blueprint.orchestration_trigger(
+@hello_orchestrator_blueprint.orchestration_trigger(
     context_name="context",
 )
 def example_orchestration(context: DurableOrchestrationContext) -> Generator[dict[str, Any], Any, Any]:
