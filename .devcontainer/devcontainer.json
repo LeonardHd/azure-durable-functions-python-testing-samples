@@ -11,13 +11,13 @@
 			"version": "lts"
 		}
 	},
-	// check https://containers.dev/guide/dockerfile/ for more information
+	// check https://containers.dev/guide/dockerfile for more information
 	"dockerComposeFile": [
 		"../docker-compose.yml",
 		"docker-compose.extend.yml"
 	],
 	"service": "app",
-	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+	"workspaceFolder": "/workspace",
   	"shutdownAction": "stopCompose",
 	"postCreateCommand": "./.devcontainer/setup.sh",
 	"customizations": {
