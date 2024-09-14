@@ -17,6 +17,11 @@ bp = Blueprint()
 async def example_orchestration_http_start(
     client: DurableOrchestrationClient, req: HttpRequest
 ) -> HttpResponse:
+    return _example_orchestration_http_start(client, req)
+
+async def _example_orchestration_http_start(
+    client: DurableOrchestrationClient, req: HttpRequest
+) -> HttpResponse:
     instance_id = await client.start_new(
         orchestration_function_name=EXAMPLE_ORCHESTRATION,
         client_input=req.get_json(),
