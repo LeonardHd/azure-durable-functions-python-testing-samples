@@ -2,3 +2,5 @@
 
 pip install -r requirements.txt
 pip install -r function_app/requirements.txt
+pip install -e .
+
