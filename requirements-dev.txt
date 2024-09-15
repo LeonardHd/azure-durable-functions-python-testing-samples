@@ -1,0 +1,5 @@
+pytest==8.3.2
+pytest-asyncio==0.24.0
+pytest_mock==3.14.0
+ruff==0.6.5
+mypy==1.11.2

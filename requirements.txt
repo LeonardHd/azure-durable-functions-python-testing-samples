@@ -1,5 +1,6 @@
-pytest==8.3.2
-pytest-asyncio==0.24.0
-pytest_mock==3.14.0
-ruff==0.6.5
-mypy==1.11.2
+# Do not include azure-functions-worker in this file
+# The Python Worker is managed by the Azure Functions platform
+# Manually managing azure-functions-worker may cause unexpected issues
+
+azure-functions
+azure-functions-durable
