@@ -17,7 +17,7 @@ bp = Blueprint()
 async def example_orchestration_http_start(
     client: DurableOrchestrationClient, req: HttpRequest
 ) -> HttpResponse:
-    return _example_orchestration_http_start(client, req)
+    return await _example_orchestration_http_start(client, req)
 
 async def _example_orchestration_http_start(
     client: DurableOrchestrationClient, req: HttpRequest
